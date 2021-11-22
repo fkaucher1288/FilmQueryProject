@@ -1,5 +1,6 @@
 package com.skilldistillery.filmquery.entities;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 
@@ -165,14 +166,25 @@ public class Film {
 	@Override
 	public String toString() {
 		return "Film [title=" + title + ", release_year=" + release_year
-				+ ", languageName=" + language + ", rating=" + rating
-				+ ", actors=" + actors + "]";
+				+ ", language=" + language + ", rating=" + rating
+				+ ", actors=" + actorFinder() + "]";
 	}
 
+	public String actorFinder() {
+		String actorResult = "";
+		for (Actor actor : actors) {
+			actorResult += actor;
+			
+		}
+		return actorResult;
+			
+		}
+			
+		
+	}
+	
+	
+	
+	
+	
 
-	
-	
-	
-	
-	
-}
